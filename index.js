@@ -11,7 +11,7 @@ module.exports = {
   filesByTestReduce: function (filesInTempDir, extraArgs, specificFunc) {
     filesInTempDir.forEach(function(element) {
       specificFunc();
-      console.log('testy', element);
+      console.log('test', element);
     });
     return filesInTempDir;
   },
