@@ -22,6 +22,10 @@ module.exports = {
     filesInTempDir.forEach(function(element) {
       specificFunc();
       console.log('test', element);
+      fs.appendFile('log.txt', 'filesByTestReduce was called\n', function (err) {
+        if (err) throw err;
+        console.log('Write for filesByTestReduce Saved!');
+      });
     });
     return filesInTempDir;
   },
